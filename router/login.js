@@ -1,7 +1,5 @@
 const express = require('express');
 const Router = express.Router(); 
-// const userModel = require('../model/user-schema.js');
-// const dbHandel = require('../db/handel.js');
 Router.post('/login', async( request, response ) => {
 	if( !request.body ){
 		response.send({code:400,msg:'参数错误'})
