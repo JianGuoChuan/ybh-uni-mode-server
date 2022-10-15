@@ -8,6 +8,7 @@ const cors = require("cors");
 // 引入路由
 const loginRouter = require('./router/login.js');
 const deviceRouter = require('./router/device.js');
+const mapRouter = require('./router/map.js');
 const testRouter = require('./router/test.js');
 // https://blog.csdn.net/weixin_41184962/article/details/124930137
 
@@ -28,6 +29,7 @@ app.use((request, response, next) => {
 
 app.use(loginRouter);
 app.use(deviceRouter);
+app.use(mapRouter);
 app.use(testRouter);
  
 // 开启服务器, 5001 是端口号
